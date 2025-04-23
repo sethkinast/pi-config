@@ -8,7 +8,7 @@ services:
     environment:
       - CADDY_INGRESS_NETWORKS=caddy
     labels:
-      caddy.email: seth@kina.st
+      caddy.email: $CF_EMAIL
       caddy.acme_dns: "cloudflare $CF_API_TOKEN"
     networks:
       - caddy
